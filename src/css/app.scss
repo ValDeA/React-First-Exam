@@ -1,0 +1,158 @@
+.main {
+  padding: 0;
+  margin-bottom: 56px;
+  overflow: hidden;
+}
+
+.bottomNav {
+  padding-right: 1rem;
+  left:0;
+  right:0;
+  bottom: 0;
+  position: fixed;
+
+  border-top: 1px solid gray;
+
+  &.item {
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+  }
+}
+
+@media (max-width:1920px) {
+  .MuiCardContent-root {
+    padding: 5px;
+  }
+
+  .device {
+    margin-left: 0.1%;
+    margin-right: 0.1%;
+    margin-bottom: 1%;
+    width: 9.8%;
+    float: left;
+  
+    & .device-header {
+      text-align: center;
+      margin: 0.5rem;
+    }
+    & .device-content {
+      padding: 0;
+
+      & .gaugeText {
+        margin: 0;
+        margin-block: 0.5rem;
+        text-align: center;
+      }
+    }
+  
+    & .arcGauge {
+      max-width: 45%;
+      width: 100%;
+      margin: 2.5%;
+      float: left;
+    }
+
+    & .sensor {
+      clear: both;
+      margin: 0;
+      height: 1rem;
+      margin-block: 0;
+      text-align: center;
+
+      & .sensorTop {
+        float: left;
+        width: 31%;
+        height: 100%;
+        padding-left: 0.5%;
+        padding-right: 0.5%;
+
+        border: 1px solid black;
+      }
+      & .sensorBottom {
+        float: left;
+        width: 23%;
+        height: 100%;
+        padding-left: 0.35%;
+        padding-right: 0.35%;
+
+        border: 1px solid black;
+      }
+      & .blue { background-color: #adc0ff; }
+      & .green { background-color: #99ff99; }
+      & .yellow { background-color: #ffd61f; }
+      & .red { background-color: #ff6c6c; }
+      & .on { background-color: #00d9ff;}
+      & .off {background-color: #b8b8b8;}
+    }
+  
+    &::after { clear: both; }
+  }
+
+  .info {
+    display: none;
+  
+    width: 100%;
+    float: left;
+    z-index: 1;
+    overflow: auto;
+  
+    position: fixed;
+    left: 0;
+    top: 0;
+  
+    &.MuiPaper-root {
+      background-color: rgb(0, 0, 0);
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+  
+    &.visible { display: block; }
+    & .arcGauge {
+      max-width: 45%;
+      width: 100%;
+      margin: 2.5%;
+      float: left;
+    }
+  
+    & .info-header {
+      margin: 0.5rem;
+    }
+    & .info-content {
+      background-color: #fefefe;
+      margin: 5% auto;
+      padding: 10px;
+      border: 1px solid #888;
+      width: 50%;
+      
+      & .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      & .gaugeText {
+        margin: 0;
+        margin-block: 0.5rem;
+        text-align: center;
+      }
+      & .sensorText {
+        display: flex;
+        width: 40%;
+        height: 50px;
+        align-items: center;
+        margin: 10px;
+        margin-block: 0.5rem;
+        text-align: center;
+        font-size: 1.2rem;
+  
+        float: left;
+  
+        & .sensorState {
+          max-width: 50px;
+          margin: 10px;
+        }
+      }
+    }
+  }
+}
